@@ -1,0 +1,11 @@
+from persona_clase import *
+a1=persona("Gael","awdh@gmail.com")
+a2=persona("Edgar","edgar@gmail.com")
+a3=persona("Leonel","leo@gmail.com")
+a4=persona("Fany","lsss@gmail.com")
+
+a1.registrar()
+a2.registrar()
+a3.registrar()
+a4.registrar()
+persona.personas_registradas()

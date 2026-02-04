@@ -1,0 +1,59 @@
+def saludo():
+  print("Hola papu")
+
+saludo()
+saludo()
+saludo()
+
+def saludar(nombre):
+  print(f"Hola {nombre}!")
+
+saludar("Juan")
+saludar("Beto")
+saludar("Tristan")
+
+def suma(a,b):
+  return a+b
+
+resultado=suma(3,5)
+print(f"La suma es: {resultado}")
+
+#Se define la clase Perro
+class Perro():
+
+  def __init__(self,name,age):
+ #init es el constructor de la clase, aquí se definen atributos
+  #self hace referencia a la instancia actual del objeto
+    self.nombre=name #atributo:nombre del perro
+    self.edad=age  # atributo:Edad del perro
+    
+#método para que perro hable
+  def hablar(self):
+    print(f"{self.nombre} dice : ¡Gua gua!")
+#méotod para calcular la edad del perro en años humanos
+  def edad_humana(self):
+    return self.edad*7
+
+mi_perro=Perro("Pelusa",6)
+mi_perro.hablar()
+print(f"La edad de {mi_perro.nombre} en años humano es: {mi_perro.edad_humana()}")
+
+mi_perro.edad_humana()
+
+class Alumnos():
+    def __init__(self,name,career,semester):
+      self.nombre=name 
+      self.carrera=career
+      self.semestre=semester
+    def imprimir(self):
+      print(f"El alumno: {self.nombre} estudia en la carrera: {self.carrera} ")
+    def fin(self):
+      return 10-(self.semestre)
+
+lista=[Alumnos("Santiago","Ingeniería en Ciencias de la Computación",2)
+,Alumnos("Beto","Ingeniería en Química",8)
+,Alumnos("Eduardo","Ingeniería en Ciencias de la Computación",4)
+,Alumnos("Tristan","Ingeniería en Ciencias de la Computación",6)]
+for a in lista:
+  a.imprimir()
+  print(f"El alumno: {a.nombre} le faltan {a.fin()} semestres")
